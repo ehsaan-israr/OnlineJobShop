@@ -1,0 +1,122 @@
+﻿@{
+    ViewBag.Title = "DeleteNew";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+@*@model IEnumerable<OnlineJobShop.Models.jobsJ>*@
+@model IEnumerable<AgainLastWebRTC.Models.jobsJ>
+@{
+    ViewBag.Title = "DeleteNew";
+}
+<style>
+    .table1 {
+        padding-left: 100px;
+        background-color: white;
+    }
+
+    table {
+        padding: 30px;
+        /*background-color: white;*/
+    }
+
+    .td1 {
+        padding-left: 90px;
+        padding-top: 15px;
+    }
+
+    hr {
+        color: black;
+    }
+
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+
+    .p1 {
+        /*padding-top: 200px;*/
+        /*text-align: center;*/
+        font-size: 20px;
+        font-style: oblique;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .div3 {
+        padding-left: 90px;
+    }
+</style>
+
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create Job</h3>
+                </div>
+            </div>
+        </div>d
+        <!-- /.row -->
+    </div>
+</div>
+
+<div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="Section-title"><span>Create your Job here</span></h4>
+            <div class="space25"></div>
+            <div class="space40"></div>
+            <form class="contact-form">
+
+
+
+                <h2>Delete Jobs</h2>
+
+                <table>
+                    <tr>
+                        <td class="td1">J ID</t>
+                        <td class="td1">Last Date</td>
+                        <td class="td1">Title</td>
+                        <td class="td1">Experience</td>
+                        <td class="td1">Qualification</td>
+                        <td class="td1">salary</td>
+                        <td class="td1">Desrciption</td>
+                    </tr>
+
+                    @foreach (var s in Model)
+                    {
+                        <tr>
+                            <td class="td1">@s.J_id</td>
+                            <td class="td1">@s.lastdate</td>
+                            <td class="td1">@s.title</td>
+                            <td class="td1">@s.experience</td>
+                            <td class="td1">@s.qualification</td>
+                            <td class="td1">@s.salary</td>
+                            <td class="td1">@s.description</td>
+
+                            <td>
+                                <a href="/Jobs/DeleteN/@s.J_id">Delete</a>
+                            </td>
+                        </tr>
+                    }
+                </table>
+                <div class="space25"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="space80"></div>
+
+

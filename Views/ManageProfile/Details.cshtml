@@ -1,0 +1,108 @@
+﻿@*@model OnlineJobShop.Models.registerJ*@
+@model AgainLastWebRTC.Models.registerJ
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>registerJ</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.J_id)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.J_id)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.fname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.fname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.lname)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.lname)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.salary)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.salary)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.qualification)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.qualification)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.area)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.area)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.experience)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.experience)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.age)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.age)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.gender)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.gender)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.contactno)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.contactno)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

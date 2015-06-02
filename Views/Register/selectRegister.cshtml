@@ -1,0 +1,68 @@
+﻿@{
+    ViewBag.Title = "selectRegister";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+
+
+
+    h2 {
+        color: blue;
+        font-family: 'Californian FB';
+        font-size: 200%;
+        background-color: lightgray;
+    }
+
+    p {
+        color: red;
+        font-family: courier;
+        font-size: 160%;
+    }
+
+</style>
+<br />
+
+<div align="center">
+    <br />
+
+    <h2>Register As Company</h2>
+
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <button type="button" class="button-blue">
+        <ul style="list-style-type:none" id="nav">
+            <li><a href="@Url.Action("registerE", "Register")">Register as an Employer</a></li>
+        </ul>
+    </button>
+    <br />
+    <br />
+    <h2>Unemployed? </h2>
+
+    <h2>Searching For job </h2>
+    <p>then</p>
+    <br />
+    <br />
+    <button type="button" class="button-blue">
+        <ul style="list-style-type:none">
+            <li>
+                <a href="@Url.Action("registerJ", "Register")">Register  as Job Seeker</a>
+            </li>
+        </ul>
+    </button>
+</div>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />

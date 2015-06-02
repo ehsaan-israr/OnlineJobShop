@@ -1,0 +1,215 @@
+﻿<!DOCTYPE html>
+
+<header>
+    <div class='navvv'>
+
+        <div id='topnav'>
+            <ul class="top-menu">
+                <li class='has-sub'>
+
+                    <a href="@Url.Action("index", "Home")"><span>Home</span></a>
+                </li>
+
+                <li class='has-sub-full'>
+                    <a href="@Url.Action("about", "Home")"><span>About</span></a>
+
+                </li>
+                <li class='has-sub'>
+                    <a href="@Url.Action("portfolio", "Home")"><span>Companies Gallery</span></a>
+                </li>
+                <li class="has-sub">
+                    <a href="@Url.Action("contact", "Home")"><span>Admin</span></a>
+                </li>
+
+                <li class="has-sub">
+                    <a href="@Url.Action("Interview", "Interview")"><span>Interview</span></a>
+
+                </li>
+                <li class="has-sub">
+                    <a href="@Url.Action("index", "Jobs")"><span>Jobs</span></a>
+
+                </li>
+                <li class="has-sub">
+                    @if (Session["loggedin"] != null)
+                    {
+                        using (Html.BeginForm("logout", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                        <input type="submit" class="button-blue"  value="Log out" />
+                        }
+                    }
+                </li>
+            </ul>
+
+        </div>
+                           @if (Session["loggedin"] != null)
+                    {
+<p>Welcome!                     @Session["username"].ToString()
+                    
+</p>
+                    }
+ 
+        </div>
+</header>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/x-icon" href="http://example.com/favicon.ico" />
+    <link rel="icon" type="image/png" href="http://example.com/favicon.png" />
+    <link rel="icon" type="image/gif" href="~/images/logo.gif" />
+
+    
+
+        <style>
+            .im {
+                width: 960px;
+            }
+            .container {
+                width: 900px;
+                margin: 0 auto 0 auto;
+                padding: 5px;
+                border: 1px solid #cccccc;
+                background: #ffffff;
+            }
+            #containe {
+                width: 825px;
+                border: 1px solid #996666;
+                margin: 0;
+                padding: 0;
+            }
+                .border1
+
+            {
+                width: 827px;
+                border: 3px solid #996633;
+                margin: 1px;
+                padding: 2px;
+            }
+
+            .border2 {
+                width: 839px;
+                border: 1px solid #996666;
+                margin: 12px auto 12px auto;
+            }
+            .navvv{
+                margin-right:200px;
+            }
+            .border3 {
+                border-radius: 25px;
+                border: 2px solid skyblue;
+                padding: 20px;
+                width: 827px;
+               
+            }
+        </style>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="keywords" content="HTML5 Template" />
+    <meta name="description" content="Multipress - Responsive Multipurpose HTML5 Template">
+    <meta name="author" content="">
+
+    <title>Online Job Shop</title>
+
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Web Fonts  -->
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,700,700italic,900italic,900,500italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/content/bootstrap.css" rel="stylesheet">
+    <link href="~/content/style1.css" rel='stylesheet' type='text/css' />
+
+    <!-- FontAwesome icons CSS -->
+    <link href="~/content/font-awesome.min.css" rel="stylesheet">
+
+    <!-- Theme Styles CSS-->
+
+
+    <link href="~/Content/styles.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="~/Content/accordion.css">
+    <link href="~/Content/owl.carousel.css" rel="stylesheet">
+    <link href="~/Content/owl.theme.css" rel="stylesheet">
+    <link href="~/Content/settings.css" rel="stylesheet" />
+    @*<img src="~/Images/logo.gif" />*@
+    <link href="~/Content/flexslider.css" rel="stylesheet">
+    <!-- Header -->
+    <div class="container">
+        <div class="col-md-12">
+            <!-- Logo -->
+            <div class="col-md-2">
+                <div class="col-md-10">
+                    <h1 class="logo">
+                        <a href="@Url.Action("index", "Home")">
+                            @*Online_Job_Shop*@
+                            <img class="im" src="~/images/logo.gif" width="1000" height="70" >
+                        </a>
+                    </h1>
+
+                    @*<h3 class="logo" style="font-size:medium"></h3>*@
+                    @*<img src="~/Images/logo.gif" /></a></h1>*@
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Navmenu -->
+    
+</head>
+    
+<body>
+
+    <div class="containe">
+        @RenderBody()
+    </div>
+
+
+@*    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)*@
+    <!-- Footer - Copyright -->
+<div class="footer-bottom">
+	<a class="back-top" href="#"><i class="fa fa-chevron-up"></i></a>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="col-md-6">
+				<p>Copyright 2015.All Rights Reserved</p>
+				<p class="_txt">Web Design: @*<a href="http://www.metamorphozis.com" class="_link">*@Abdullah Khan</a></p>
+			</div>
+			<div class="col-md-6">
+				<ul class="top-contact">
+					<li><i class="fa fa-phone"></i> +923214733971</li>
+					<li><i class="fa fa-envelope"></i> onlinejobshop@gmail.com</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - Copyright -->
+
+<!-- JavaScript -->
+<script src="~/scripts/jquery-1.8.3.min.js"></script>
+<script src="~/scripts/jquery.themepunch.plugins.min.js"></script>
+<script src="~/scripts/jquery.themepunch.revolution.min.js"></script>
+<script src="~/scripts/rs.home.js"></script>
+<script src="~/scripts/superTabs.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<script type="text/javascript">google.load("jqueryui", "1.7.2");</script> 
+<script src="~/scripts/bootstrap.js"></script>
+<script src="~/scripts/jquery.flexslider.js"></script>
+<script src="~/scripts/owl.carousel.js"></script>
+<script src="~/scripts/jquery.akordeon.js"></script>
+<script src="~/scripts/jflickrfeed.min.js"></script>
+<script src="~/scripts/tab.js"></script>
+<script src="~/scripts/jquery.isotope.min.js"></script>
+<script src="~/scripts/jquery.mobilemenu.js"></script>
+<script src="~/scripts/jquery.magnific-popup.js"></script> 
+<script src="~/scripts/main.js"></script>
+<script src="~/scripts/jquery-ui.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,327 @@
+﻿<!DOCTYPE html>
+<html>
+@*<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>*@
+    <head>
+
+        <style>
+            #menu, #menu ul {
+                margin: 0;
+                padding: 0;
+                list-style: none;
+            }
+
+            #menu {
+                width: 960px;
+                margin: 60px auto;
+                border: 1px solid #222;
+                background-color: #111;
+                background-image: linear-gradient(#444, #111);
+                border-radius: 6px;
+                box-shadow: 0 1px 1px #777;
+            }
+
+                #menu:before,
+                #menu:after {
+                    content: "";
+                    display: table;
+                }
+
+                #menu:after {
+                    clear: both;
+                }
+
+            #menu {
+                zoom: 1;
+            }
+
+                #menu li {
+                    float: left;
+                    border-right: 1px solid #222;
+                    box-shadow: 1px 0 0 #444;
+                    position: relative;
+                }
+
+                #menu a {
+                    float: left;
+                    padding: 12px 30px;
+                    color: #999;
+                    text-transform: uppercase;
+                    font: bold 12px Arial, Helvetica;
+                    text-decoration: none;
+                    text-shadow: 0 1px 0 #000;
+                }
+
+                #menu li:hover > a {
+                    color: #fafafa;
+                }
+
+                #menu ul li:first-child > a {
+                    border-radius: 3px 3px 0 0;
+                }
+
+                    #menu ul li:first-child > a:after {
+                        content: '';
+                        position: absolute;
+                        left: 40px;
+                        top: -6px;
+                        border-left: 6px solid transparent;
+                        border-right: 6px solid transparent;
+                        border-bottom: 6px solid #444;
+                    }
+
+                #menu ul ul li:first-child a:after {
+                    left: -6px;
+                    top: 50%;
+                    margin-top: -6px;
+                    border-left: 0;
+                    border-bottom: 6px solid transparent;
+                    border-top: 6px solid transparent;
+                    border-right: 6px solid #3b3b3b;
+                }
+
+                #menu ul li:first-child a:hover:after {
+                    border-bottom-color: #04acec;
+                }
+
+                #menu ul ul li:first-child a:hover:after {
+                    border-right-color: #0299d3;
+                    border-bottom-color: transparent;
+                }
+
+                #menu ul li:last-child > a {
+                    border-radius: 0 0 3px 3px;
+                }
+
+                #menu ul {
+                    margin: 20px 0 0 0;
+                    _margin: 0; /*IE6 only*/
+                    opacity: 0;
+                    visibility: hidden;
+                    position: absolute;
+                    top: 38px;
+                    left: 0;
+                    z-index: 1;
+                    background: #444;
+                    background: linear-gradient(#444, #111);
+                    box-shadow: 0 -1px 0 rgba(255,255,255,.3);
+                    border-radius: 3px;
+                    transition: all .2s ease-in-out;
+                }
+
+                #menu li:hover > ul {
+                    opacity: 1;
+                    visibility: visible;
+                    margin: 0;
+                }
+
+                #menu ul ul {
+                    top: 0;
+                    left: 150px;
+                    margin: 0 0 0 20px;
+                    _margin: 0; /*IE6 only*/
+                    box-shadow: -1px 0 0 rgba(255,255,255,.3);
+                }
+
+                #menu ul li {
+                    float: none;
+                    display: block;
+                    border: 0;
+                    _line-height: 0; /*IE6 only*/
+                    box-shadow: 0 1px 0 #111, 0 2px 0 #666;
+                }
+
+                    #menu ul li:last-child {
+                        box-shadow: none;
+                    }
+
+                #menu ul a {
+                    padding: 10px;
+                    width: 130px;
+                    _height: 10px; /*IE6 only*/
+                    display: block;
+                    white-space: nowrap;
+                    float: none;
+                    text-transform: none;
+                }
+
+                    #menu ul a:hover {
+                        background-color: #0186ba;
+                        background-image: linear-gradient(#04acec, #0186ba);
+                    }
+        </style>
+	<!-- Meta -->
+	<meta charset="utf-8">
+	<meta name="keywords" content="HTML5 Template" />
+	<meta name="description" content="Multipress - Responsive Multipurpose HTML5 Template">
+	<meta name="author" content="">
+   @*      @Styles.Render("/Content/css")
+    @Scripts.Render("/bundles/modernizr")*@
+	<title>@ViewBag.Title</title>
+
+	<!-- Mobile Meta -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Web Fonts  -->
+	<link href='http://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic,400italic,500,700,700italic,900italic,900,500italic' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,700,600italic,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Arimo:400,700' rel='stylesheet' type='text/css'>
+
+	<!-- Bootstrap core CSS -->
+	<link href="~/content/bootstrap.css" rel="stylesheet">
+        		<link href="~/content/style1.css" rel='stylesheet' type='text/css' />
+
+	<!-- FontAwesome icons CSS -->
+	<link href="~/content/font-awesome.min.css" rel="stylesheet">
+
+	<!-- Theme Styles CSS-->
+
+
+	<link href="~/Content/styles.css" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="~/Content/accordion.css">
+	<link href="~/Content/owl.carousel.css" rel="stylesheet">
+	<link href="~/Content/owl.theme.css" rel="stylesheet">
+	<link href="~/Content/settings.css" rel="stylesheet" />
+        @*<img src="~/Images/logo.gif" />*@
+	<link href="~/Content/flexslider.css" rel="stylesheet">
+        <!-- Header -->
+       
+        
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="col-md-12">
+                <!-- Logo -->
+                <div class="col-md-2">
+                    <h3 class="logo" style="font-size:medium"></h3>
+                               <img src="~/Images/logo.gif" />
+
+                </div>
+           
+
+        <div class="col-md-10">
+         <div id='topnav'>
+                        <ul class="top-menu">
+                            @*                  <li class='active has-sub'>*@
+                            @*<li class='has-sub'>
+
+                                <a href="@Url.Action("index", "Home")"><span>Home</span></a>
+                            </li>*@
+
+                            <li class='has-sub-full'>
+                                <a href="@Url.Action("about", "Home")"><span>About</span></a>
+
+                            </li> 
+                            <li class='has-sub'>
+                                <a href="@Url.Action("portfolio", "Home")"><span>Companies Gallery</span></a>
+                            </li>
+                            @*  <li class='has-sub'>
+                            <a href="@Url.Action("blog", "Home")"><span>Blog</span></a>
+                            *@
+                            <li class="has-sub">
+                                <a href="@Url.Action("contact", "Home")"><span>Contact</span></a>
+
+                            </li>
+
+                           
+                            <li class="has-sub">
+                                <a href="@Url.Action("ViewJob", "Jobs")"><span>Jobs</span></a>
+
+                            </li>
+                            @*<li class="has-sub">
+                                <a href="@Url.Action("personal_resume", "Home")"><span>Resume Creator</span></a>
+
+                            </li>*@
+                            <li class='has-sub-full'>
+                                <a href="@Url.Action("Index", "Login")"><span>Login</span></a>
+
+                            </li>
+                            <li class='has-sub-full'>
+                                <a href="@Url.Action("registerE", "Register")"><span>Register</span></a>
+
+                            </li>
+                             <li class="has-sub">
+                            @if (Session["loggedin"] != null)
+                            {
+                                using (Html.BeginForm("logout", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                                {
+                                <input type="submit" class="button-blue"  value="Log out" />
+                                }
+                            }
+                            </li>
+                            @*<li class="has-sub">
+                    @if (Session["loggedin"] != null)
+                    {
+                        using (Html.BeginForm("logout", "Home", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+                        {
+                        <input type="submit" class="button-blue"  value="Log out" />
+                        }
+                    }
+</li>*@
+                       
+
+                        </ul>
+
+                    </div>
+
+</div>
+                </div>
+        
+            </div>
+
+    </header>
+     
+    @RenderBody()
+
+   @* @Scripts.Render("/bundles/jquery")
+    @RenderSection("scripts", required: false)*@
+    <!-- Footer - Copyright -->
+<div class="footer-bottom">
+	<a class="back-top" href="#"><i class="fa fa-chevron-up"></i></a>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="col-md-6">
+				<p>Copyright 2015.All Rights Reserved</p>
+				<p class="_txt">Web Design: @*<a href="http://www.metamorphozis.com" class="_link">*@Abdullah Khan</p>
+			</div>
+			<div class="col-md-6">
+				<ul class="top-contact">
+					<li><i class="fa fa-phone"></i> +923214733971</li>
+					<li><i class="fa fa-envelope"></i> onlinejobshop@gmail.com</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - Copyright -->
+
+
+<!-- JavaScript -->
+<script src="~/scripts/jquery-1.8.3.min.js"></script>
+<script src="~/scripts/jquery.themepunch.plugins.min.js"></script>
+<script src="~/scripts/jquery.themepunch.revolution.min.js"></script>
+<script src="~/scripts/rs.home.js"></script>
+<script src="~/scripts/superTabs.js"></script>
+<script type="text/javascript" src="http://www.google.com/jsapi"></script> 
+<script type="text/javascript">google.load("jqueryui", "1.7.2");</script> 
+<script src="~/scripts/bootstrap.js"></script>
+<script src="~/scripts/jquery.flexslider.js"></script>
+<script src="~/scripts/owl.carousel.js"></script>
+<script src="~/scripts/jquery.akordeon.js"></script>
+<script src="~/scripts/jflickrfeed.min.js"></script>
+<script src="~/scripts/tab.js"></script>
+<script src="~/scripts/jquery.isotope.min.js"></script>
+<script src="~/scripts/jquery.mobilemenu.js"></script>
+<script src="~/scripts/jquery.magnific-popup.js"></script> 
+<script src="~/scripts/main.js"></script>
+<script src="~/scripts/jquery-ui.js"></script>
+
+
+</body>
+</html>

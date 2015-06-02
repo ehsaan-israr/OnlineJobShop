@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<!--[if IE 8]>			<html class="ie ie8"> <![endif]-->
+<!--[if IE 9]>			<html class="ie ie9"> <![endif]-->
+<!--[if gt IE 9]><!-->	<html> <!--<![endif]-->
+    
+<body>
+    <div class="container">
+      <div class="col-md-12">
+         <!-- Logo -->
+         <div class="col-md-2">
+             
+         </div>
+         
+        <!-- Navmenu -->
+         <div class="col-md-10">
+            <div id='topnav'>
+  @*<button type="button" class="button-blue" > 	<select name="register">
+<option value="volvo">register</option>
+<option value="saab"><a href="~/home/registere/">reg as company</option>
+<option value="fiat"><a href="@url.action("registerj", "home")">reg as jobseeker</option>
+</select>
+        </button>*@
+                      <button type="button" class="button-blue">
+                        <ul style="list-style-type:none"  id="nav">
+                        <li><a href="@Url.Action("selectRegister", "Register")">Register</a></li></ul></button>   
+                          <button type="button" class="button-blue" >
+                           <ul style="list-style-type:none" >      <li>
+                          <a href="@Url.Action("login", "Login")">Login</a></li></ul></button>      
+                        
+
+                 
+            @*<ul>
+              <li><a href="#">Drop Down One</a></li>
+              <li><a href="#">Drop Down Two</a>*@
+                @*<ul>
+                  <li><a href="#">Sub Drop Down One</a></li>
+                  <li><a href="#">Sub Drop Down Two</a></li>
+                  <li><a href="#">Sub Drop Down Three</a></li>
+                  <li><a href="#">Sub Drop Down Four</a></li>
+                  <li><a href="#">Sub Drop Down Five</a></li>
+                </ul>*@
+                  @*</ul>
+              </li>*@
+            </div>
+         </div>
+        
+      </div>
+   </div>
+
+<div class="body">
+<!-- Slider -->
+ <div class="fullwidthbanner-container" >
+	<div class="fullwidthbanner">
+
+		<ul>
+			<li data-transition="random" data-slotamount="7" data-masterspeed="1000">
+				<img src="~/Images/careerBanner.png" alt="slide" data-fullwidthcentering="true">
+				<div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="80" data-speed="1100" data-start="1100" data-easing="easeInOutBack" style="font-size:36px;">
+				@*	<h3>A JOB FAIR AT YOUR FINGERTIPS </h3>
+				*@</div>
+				<div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="196" data-speed="1100" data-start="1400" data-easing="easeInOutBack">
+					@*<p>No need to travel or set up a booth to make a personal connection.<br/> Connect with prospective applicants from all over the U.S. and military installations worldwide,<br /> in real time at our online hiring fairs.</p>
+				*@</div>
+				<div class="tp-caption lfb carousel-caption-inner" data-x="30" data-y="310" data-speed="1300" data-start="1700" data-easing="easeInOutBack">
+					@*<button type="button" class="button-blue" >Login!</button>*@
+				</div>
+			</li>
+	 	 
+			<li data-transition="random" data-slotamount="7" data-masterspeed="1000">
+				<img src="~/Images/highlight_banner4_color.jpg" alt="slide" data-fullwidthcentering="true">
+                <div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="80" data-speed="1100" data-start="1100" data-easing="easeInOutBack" style="font-size:36px;">
+					<h3>CREATE UNLIMITED JOB LISTINGS</h3>
+				</div>
+				<div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="196" data-speed="1100" data-start="1400" data-easing="easeInOutBack">
+					<p>There's no cost to create job listings<br />. Your listings gain assured exposure to a diverse and talented applicant pool.</p>
+				</div>
+				<div class="tp-caption lfb carousel-caption-inner" data-x="30" data-y="310" data-speed="1300" data-start="1700" data-easing="easeInOutBack">
+					@*<button type="button" class="button-blue" >Login!</button>*@
+				</div>				
+			</li>
+
+			<li data-transition="random" data-slotamount="7" data-masterspeed="1000">
+				<img src="~/Images/jobs%20website%20banner%20blue%20new%20text.jpg" alt="slide" data-fullwidthcentering="true">
+				 <div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="80" data-speed="1100" data-start="1100" data-easing="easeInOutBack" style="font-size:36px;">
+				@*	<h3>MAKE YOUR RESUME ONLINE </span></h3>
+				*@</div>
+				<div class="tp-caption large_black sfr carousel-caption-inner" data-x="30" data-y="196" data-speed="1100" data-start="1400" data-easing="easeInOutBack">
+					@*<p>Make your CV here,<br /> in very short time</p>
+				*@</div>
+				<div class="tp-caption lfb carousel-caption-inner" data-x="30" data-y="310" data-speed="1300" data-start="1700" data-easing="easeInOutBack">
+
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<!-- Slider -->
+
+<!-- Services -->
+<div class="section">
+    <div class="container">
+		<div class="col-lg-4 col-md-4">
+			<div class="services1">
+				<span class="service-ico1"><img scr="~/images/icon1.png" alt='' /></span>
+				<h3>Online Interview CV Webinars and much more </h3>
+				<p>Online Job shop also facilitate to conduct interview online at job seeker's and employer's own place</p>	
+				<a href="#">Read More &rarr;</a>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4">
+			<div class="services1">
+				<span class="service-ico2"><img scr="~/images/icon2.png" alt='' /></span>
+				<h3>Get selected for Job at Home</h3>
+				<p>Online Job Shop provides facility to its user to get best job at their own place they dont have to visit the offices and interview places</p>
+				<a href="#">Read More &rarr;</a>
+			</div>
+		</div>
+		<div class="col-lg-4 col-md-4">
+			<dijv class="services1">
+				<span class="service-ico3"><img scr="~/images/icon3.png" alt='' /></span>
+		            <h3>All Types Of Job fairs</h3>
+		            <p>Online Job shop is a website of job fairs where job seeker will get jobs related to any field and a wide range of jobs are available here</p>
+				<a href="#">Read More &rarr;</a>
+			</dijv>
+		</div>
+	</div>
+</div>
+<!-- Services -->
+
+<!-- Recent Works -->
+<div class="container home-works">
+	<div class="row">
+		<div class="col-lg-12">
+			<h2 class="section-title"><span>Companies Providing Jobs</span></h2>
+		</div>
+
+		<div id="recent-projects1" class="owl-carousel">
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/tag_converted.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/tag_converted.jpg">View Larger</a>
+                                    <a href="http://www.tagheuer.com/int-en/home">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Tag Heuer<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/D_converted.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/D_converted.jpg">View Larger</a>
+                                    <a href="http://www.descon.com/">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Descon<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/images.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/images.jpg">View Larger</a>
+                                    <a href="http://www.samsung.com/pk/home">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Samsung<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/url35.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/url35.jpg">View Larger</a>
+                                    <a href="http://www.ptcl.com.pk/">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Pakistan Telecommunication Company Limited<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/Free-HD-Logo-Nike-Wallpaper_converted.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/Free-HD-Logo-Nike-Wallpaper_converted.jpg">View Larger</a>
+                                    <a href="http://www.nike.com/us/en_us/">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Nike <span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/Express-Entertainment.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/Express-Entertainment.jpg">View Larger</a>
+                                    <a href="portfolio_single1.html">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Express News<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/reebok.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/reebok.jpgg">View Larger</a>
+                                    <a href="http://global.reebok.com/">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Reebok<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/ga_converted.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/ga_converted.jpg">View Larger</a>
+                                    <a href="http://www.armani.com/us/giorgioarmani">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Giorgio Armani<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/2000px-Levi_39_s_logo.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/2000px-Levi_39_s_logo.jpg">View Larger</a>
+                                    <a href="http://us.levi.com/home/index.jsp">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Levis<span></span></h4>
+			</div>
+
+			<div class="item works-content">
+				<div class="works-overlay">
+			      	<img class="img-responsive" src="~/Images/porsche.jpg" alt=""/>
+                        <span>
+                            <div class="zoom">
+                                <div class="zoom-info">
+                                    <a class="lightbox-popup" href="~/Images/porsche.jpg">View Larger</a>
+                                    <a href="http://www.porsche.com/middle-east/_pakistan_/">Read More</a>
+                                </div>
+                            </div>
+                        </span>                        
+				</div>
+				<h4>Porsche<span></span></h4>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Recent Works -->
+
+
+
+<div class="space80"></div>
+
+
+
+
+
+
+</body>
+</html>

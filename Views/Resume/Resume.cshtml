@@ -1,0 +1,124 @@
+﻿@{
+    ViewBag.Title = "Resume";
+}
+
+
+        <div style="margin-left:20%;">
+            <div>
+                 <div  >         
+                              <h3 style="margin-left:20%;font-size:xx-large;" class="p2">Upload Your Resume Now!</h3>
+                              <!--===============uploaaaaaaaaaaaaaaaaaaddddddddddddddddd=================================-->
+
+                              <form action="/home/save" method="post" enctype="multipart/form-data">
+
+                                  <h4 style="font-size:larger;">Upload Image:</h4> <input type="file" name="image" /> <br />
+
+                                  <br />
+
+                                  <input style="margin-left:30%;" type="submit" value="upload" />
+                              </form>
+                              <!--===============uploaaaaaaaaaaaaaaaaaaddddddddddddddddd=================================-->
+
+                          
+                           </div>
+                      </div>
+                  
+
+             <div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="space25"></div>
+                <div class="space40"></div>
+                <table id="table1" class="table">
+                          
+                          <label>
+
+                              <form action="/resume/Addresume" method="post">
+
+                                  <tr> <td><span class="text-form"></span> <h3>Objective</h3></td><td> <textarea rows="3" cols="30" id="objective" name="objective"></textarea> </td></tr>
+                                  </span>
+                           </label>
+                          <tr> <td><h3>Personal Information: </h3></td></tr>
+                          <tr> <td>First name: </td><td> <input type="text" id="fname" name="fname" /> </td> </tr>
+                          <tr> <td>Last name: </td><td> <input type="text" id="lname" name="lname"/> </td> </tr>
+                          <tr> <td>Your email: </td><td> <input type="text" id="email" name="email" /><br></td> </tr>
+                         
+
+                          <tr>
+                              <td>Date of Birth: </td>
+                              <td> <input type="text" id="b_day" name="bday" /><br>
+</td>
+                          </tr>
+
+                          <tr> <td>Phone: </td><td> <input cols="19" name ="phone"/> </td></tr>
+
+                          <tr> <td>Address: </td><td> <textarea rows="3" cols="30" id="adress" name="address"></textarea> </td></tr>
+
+                         
+                          <tr> <td><h3>Work Experience:</h3> </td>
+                          <tr> <td>Job Title: </td><td> <input id="c_role" name="ejob" /> </td></tr>
+
+                          <tr> <td>Company: </td><td> <input id="company" rows="3" cols="30" name="ecompany"/> </td></tr>
+
+                          <tr>
+                              <td>Start Date: </td>
+                              <td>
+                               
+                                 <input class="text-box" name="esmonth" /> 
+
+                              </td>
+                          </tr>
+                          <tr>
+                              <td>End Date: </td>
+                              <td>
+                                  <input class="text-box" name="emonth" />
+                              </td>
+                          </tr>
+
+                          <tr>
+                              <td>Description/Responsibilities: </td>
+                              <td> <textarea rows="3" cols="30" id="c_desc" name="eresp"></textarea> </td>
+                          </tr>
+                          <tr> <td><h3>Education: </h3></td></tr>
+                          <tr> <td>Name of institution: </td><td> <input class="text-box" name="education" /> </td></tr>
+                          <tr> <td>Degree Title: </td><td> <input class="text-box" name="e_course" /> </td></tr>
+                          <tr> <td>Start Date: </td><td> <input class="text-box" name="e_start_date" /> </td></tr>
+                          <tr> <td>End Date: </td><td> <input class="text-box" name="e_end_date" /> </td></tr>
+                          <tr>
+                         <tr> <td><h3>Education: </h3></td></tr>
+                          <tr> <td>Name of institution: </td><td> <input class="text-box" name="education1" /> </td></tr>
+                          <tr> <td>Degree Title: </td><td> <input class="text-box" name="e_course1" /> </td></tr>
+                          <tr> <td>Start Date: </td><td> <input class="text-box" name="e_start_date1" /> </td></tr>
+                          <tr> <td>End Date: </td><td> <input class="text-box" name="e_end_date1" /> </td></tr>
+                          <tr></tr>
+                          <tr> <td><h3>Education: </h3></td></tr>
+                          <tr> <td>Name of institution: </td><td> <input class="text-box" name="education2" /> </td></tr>
+                          <tr> <td>Degree Title: </td><td> <input class="text-box" name="e_course2" /> </td></tr>
+                          <tr> <td>Start Date: </td><td> <input class="text-box" name="e_start_date2" /> </td></tr>
+                          <tr> <td>End Date: </td><td> <input class="text-box" name="e_end_date2" /> </td></tr>
+                          <tr>
+
+                          </tr>
+                          <br>
+                          <tr> <td><h3>Skills and expertise</h3></td></tr></br>
+                          <tr> <td>Skills: </td><td> <textarea class="text-box" rows="3" cols="30" name="skills"></textarea>  </td></tr>
+                          <tr> <td>Expertise: </td><td> <textarea class="text-box" rows="3" cols="30" name="expertise"></textarea>  </td></tr>
+                         
+                          <tr> <td><h3>Rewards: </h3></td></tr>
+                          <tr> <td>Awards: </td> <td><textarea class="text-box" rows="3" cols="30" name="awards1"></textarea><br />
+                           
+                                                 </td></tr>
+                          <tr> <td>Reference: </td> <td><textarea class="text-box" rows="3" cols="30" name="ref"></textarea> </td></tr>
+                          <tr> <td>You are done! </td> <td> </td> </tr>
+                      </table>
+                      
+            
+
+                      <input type="submit" value="Done" />
+                  </div>
+            </div>
+</div>
+

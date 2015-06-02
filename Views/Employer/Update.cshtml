@@ -1,0 +1,93 @@
+﻿@*@model OnlineJobShop.Models.registerE*@
+
+@model AgainLastWebRTC.Models.registerE
+
+@{
+    ViewBag.Title = "Update";
+    Layout = "~/Views/Shared/_LayoutEmps.cshtml";
+}
+
+<h2>Update</h2>
+
+
+<div class="space20"></div>
+<div class="page-head">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>UPDATE PERSONAL INFORMATION</h3>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="space20"></div>
+
+<section >
+    <div class="Login">
+    <div class="Login-head">
+        <h3>UPDATE INFORMATION</h3>
+
+    </div>
+    @using (Html.BeginForm("UpdateConfirm", "Employer",new {id = Model.Id} ,FormMethod.Post, Model.Id)) {
+         @Html.AntiForgeryToken()
+    <div>
+        <fieldset>
+            <legend style="font-size:larger;font-weight:bolder" > </legend>
+
+            
+            <div>
+            <h4>Company Name</h4>
+             @Html.TextBoxFor(m => m.comName)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Email ID</h4>
+             @Html.TextBoxFor(m => m.eMailId)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Password</h4>
+             @Html.TextBoxFor(m => m.password)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Website</h4>
+             @Html.TextBoxFor(m => m.website)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Address</h4>
+             @Html.TextBoxFor(m => m.address)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Contact Number</h4>
+             @Html.TextBoxFor(m => m.contNum)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            
+            
+            <div class="submit-button">
+            <input type="submit" value="UPDATE PROFILE">
+            </div>
+
+            
+        </fieldset>
+    </div>
+}
+        </div>
+</section>
+<div class="space20"></div>

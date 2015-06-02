@@ -1,0 +1,148 @@
+﻿@model AgainLastWebRTC.Models.registerJ
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Delete Job Seeker</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+
+<div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <h4 class="Section-title"><span>Create your Job here</span></h4>
+            <div class="space25"></div>
+            <div class="space40"></div>
+            <form class="contact-form">
+
+
+                <h2>Delete</h2>
+
+                <h3>Are you sure you want to delete this?</h3>
+                <fieldset>
+                    <legend>registerJ</legend>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.J_id)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.J_id)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.fname)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.fname)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.lname)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.lname)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.email)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.email)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.username)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.username)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.password)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.password)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.salary)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.salary)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.qualification)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.qualification)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.area)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.area)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.experience)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.experience)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.age)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.age)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.gender)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.gender)
+                    </div>
+
+                    <div class="display-label">
+                        @Html.DisplayNameFor(model => model.contactno)
+                    </div>
+                    <div class="display-field">
+                        @Html.DisplayFor(model => model.contactno)
+                    </div>
+                </fieldset>
+                @using (Html.BeginForm())
+                {
+                    @Html.AntiForgeryToken()
+                    <p>
+                        <input type="submit" value="Delete" /> |
+                        @Html.ActionLink("Back to List", "Index")
+                    </p>
+                }
+                <div class="space25"></div>
+                <button class="button-blue btn" type="button">Send Message</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="space80"></div>
+
+

@@ -1,0 +1,230 @@
+﻿@{
+    ViewBag.Title = "qualification_resume";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+
+
+<style>
+    #Main {
+        margin-left:20%;
+        color:white;
+    }
+
+    .table1 {
+         padding-left: 150px;
+        /*background-color: #F0F0F0;*/
+    }
+
+    table {
+        /*border-style:solid;
+      
+        border-width:15px;
+        border-color:black;*/
+        padding: 70px;
+        /*padding-left:200px;*/
+        /*background-color: white;*/
+        background-color: #F0F0F0;
+    }
+    
+    .st4 {
+    font-size:large;
+    font-style:inherit;
+    font-weight: bold;
+    color:GrayText;
+    padding-left:80%;
+    }
+    .td1 {
+        padding-left: 5px;
+       padding-right: 5px;
+        padding-top: 25px;
+        padding-bottom:25px;
+        }
+    th {
+    color:blue;
+    font-size:medium;
+    font-weight:500;
+        border-style:outset;
+        border-bottom-width:2px;
+        border-bottom-color:gray;
+    }
+
+    td {
+        /*border-style:solid;
+        border-bottom-width:1px;
+        border-bottom-color:gray;
+        color:green;*/
+         /*padding-top:15px;*/
+        padding-left:50px;
+        padding-right:50px;
+        }
+    hr {
+        color: black;
+    }
+    legend {
+    color:blue;
+    font-size:xx-large;
+    font-style:italic;
+    /*padding-bottom:20px;*/
+    }
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+    .st {
+    font-size:large;
+    font-style:inherit;
+    font-weight: bold;
+    color:blue;
+    }
+    .st3 {
+    font-size:large;
+    font-style:inherit;
+    font-weight: bold;
+    color:black;
+    padding-top:10px;
+    padding-bottom:5px;
+    border-bottom:double;
+    border-width:5px;
+
+    }
+
+    .st1 {
+    font-size:large;
+    font-style:inherit;
+    font-weight: bold;
+    color:gray;
+    }
+
+    .p1 {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .p2 {
+        font-size: 30px;
+    }
+    .div3 {
+        padding-left: 90px;
+    }
+    .hd {
+        color:darkblue;
+        font-size:x-large;
+    }
+</style>
+
+
+
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="hd">Make Your Resume here</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+
+<div class="page-head">
+            <h3 class="st1">Education Information                      </h3>
+             
+</div>
+<div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="table1">
+         <p class="st4">                      Step (2 of 4)</p>
+    <div class="row">
+        
+            <div class="contact-form">
+
+
+
+
+
+
+ @using (Html.BeginForm("Experience","Resume"))
+{
+ 
+                                <table>
+                <tr>
+                    <td class="st3">Education</td>
+                    <td class="st3">1st </td>
+                    <td class="st3">2nd </td>
+                    <td class="st3">3rd </td>
+
+                <tr>
+                    <td class="st">Degree</td>
+
+      
+                                 <td><input  type="text" name="degree" value="degree"/></td>
+                                                     <td><input  type="text" name="degree" value="degree"/></td>
+
+                                                     <td><input  type="text" name="degree" value="degree"/></td>
+
+</tr>
+                                <tr>
+                    <td class ="st">Institution</td>
+                    <td><input  type="text" name="institute" value="institution"/></td>
+                    <td><input  type="text" name="institute" value="institution"/></td>
+                    <td><input  type="text" name="institute" value="institution"/></td>
+
+                </tr>
+                                <tr>
+                    <td class="st">Board</td>
+    
+                <td><input  type="text" name="major" value="board"/></td>
+                <td><input  type="text" name="major" value="board"/></td>
+                <td><input  type="text" name="major" value="board"/></td>
+                </tr>
+      
+                           <tr>
+                    <td class="st">Grade</td>
+
+                    <td><input  type="text" name="grade" value="division"/></td>
+                    <td><input  type="text" name="grade" value="division"/></td>
+                    <td><input  type="text" name="grade" value="division"/></td>
+                    </tr>
+                           <tr>
+                    <td class="st">Start Date</td>
+                    <td><input  type="text" name="toyear" value="startdate"/></td>
+                    <td><input  type="text" name="toyear" value="startdate"/></td>
+                    <td><input  type="text" name="toyear" value="startdate"/></td>
+</tr>
+                           <tr>
+                    <td class="st">End Date</td>
+
+                    <td><input  type="text" name="fromdate" value="enddate"/></td>
+                    <td><input  type="text" name="fromdate" value="enddate"/></td>
+                    <td><input  type="text" name="fromdate" value="enddate"/></td>
+                </tr>
+                <tr>
+                    <td><a  href="~/Resume/personal"><input  type="button" class="button-blue" name="back" value="Back"/></a></td>
+            
+ <td></td>
+                    <td></td>
+                                       <td><input type="submit" class="button-blue" name="next" value="Next" /></td>
+                </tr>
+  
+                          </table> 
+
+ 
+}
+</div>
+                                </div>
+        </div>
+        <div class="space25"></div>
+
+   
+<div class="space80"></div>
+

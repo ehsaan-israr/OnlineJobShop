@@ -1,0 +1,192 @@
+﻿@model IEnumerable<AgainLastWebRTC.Models.registerJ>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+}
+<style>
+    .table1 {
+        padding-left: 50px;
+    }
+
+    table {
+        padding: 70px;
+        background-color: white;
+
+    }
+    .td1 {
+        padding-left: 10px;
+       padding-right: 10px;
+        padding-top: 25px;
+        padding-bottom:25px;
+        }
+    th {
+    color:blue;
+    font-size:medium;
+    font-weight:500;
+        border-style:solid;
+        border-bottom-width:2px;
+        border-bottom-color:gray;
+    }
+
+    td {
+        border-style:solid;
+        border-bottom-width:1px;
+        border-bottom-color:gray;
+        color:green;
+         }
+    hr {
+        color: black;
+    }
+
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+
+    .p1 {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .p2 {
+        font-size: 30px;
+    }
+    .div3 {
+        padding-left: 90px;
+    }
+</style>
+
+
+<div class="page-head">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+
+                <p class="p2">
+             Admin Panel
+                       </p>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+</div>
+
+<div class="table1">
+
+
+    
+<fieldset>
+    <legend> Job Seeker's Details</legend>
+         <table>    
+    <tr>
+           
+            <th class="td1">
+                @Html.DisplayNameFor(model => model.J_id)
+            </th>
+                <th class="td1">
+                    @Html.DisplayName("First Name")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Last date")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Email")
+                </th>
+                  <th class="td1">
+                    @Html.DisplayName("Username")
+                </th>
+                   <th class="td1">
+                    @Html.DisplayName("Password")
+                </th>
+                
+                <th class="td1">
+                    @Html.DisplayName("Salary")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Qualification")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Area")
+                </th>
+                                
+                <th class="td1">
+                    @Html.DisplayName("Experience")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Age")
+                </th>
+                <th class="td1">
+                    @Html.DisplayName("Gender")
+                </th>
+                
+                <th class="td1">
+                    @Html.DisplayName("Contact no.")
+                </th>
+                <th></th>
+            </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.J_id)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.fname)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.lname)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.email)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.username)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.password)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.salary)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.qualification)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.area)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.experience)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.age)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.gender)
+                </td>
+                <td class="td1">
+                    @Html.DisplayFor(modelItem => item.contactno)
+                </td>
+
+                <td class="td1">
+                    @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                    @Html.ActionLink("Delete ", "DeleteNew", new { /* id=item.PrimaryKey */ })
+                </td>
+            </tr>
+
+
+        }
+
+    </table>
+</fieldset>
+</div>

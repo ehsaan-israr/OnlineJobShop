@@ -1,0 +1,40 @@
+@model AgainLastWebRTC.Models.login
+                  
+
+                    <br />
+                    <br />               
+                    <div class="Login">
+    <div class="Login-head">
+        <h3>LOGIN</h3>
+    </div>
+
+    @using (Html.BeginForm("loginadmin", "Admin", FormMethod.Post))
+    {
+        <div class="ticker">
+
+            <h4>Username</h4>
+            @Html.EditorFor(model => model.username)<span> </span>
+            <div class="clear"> </div>
+        </div>
+        <div>
+            <h4>Password</h4>
+            @Html.PasswordFor(model => model.password)
+            <div class="clear"> </div>
+            <input type="radio" name="rr" value="admin" checked><i> </i>Admin
+               </div>
+        <div class="submit-button">
+            <input type="submit" value="LOGIN  >">
+
+            @*</div>*@
+            <div class="clear">
+
+            </div>
+
+        </div>
+    }
+</div>
+		
+<br />
+<br />
+<br />
+<br />

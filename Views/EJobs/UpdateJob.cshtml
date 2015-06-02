@@ -1,0 +1,100 @@
+﻿@model AgainLastWebRTC.Models.jobsJ
+
+@{
+    ViewBag.Title = "UpdateJob";
+    Layout = "~/Views/Shared/_LayoutJobss.cshtml";
+}
+
+<div class="space20"></div>
+<div class="page-head">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>UPDATE JOBS</h3>
+			</div>
+			
+		</div>
+	</div>
+</div>
+<div class="space20"></div>
+
+<section >
+    <div class="Login">
+    <div class="Login-head">
+        <h3>UPDATE JOB</h3>
+
+    </div>
+    @using (Html.BeginForm("Update", "EJobs",new {id = Model.Id} ,FormMethod.Post, Model.Id)) {
+         @Html.AntiForgeryToken()
+    <div>
+        <fieldset>
+            <legend style="font-size:larger;font-weight:bolder" > </legend>
+
+            
+            @*<div>
+            <h4>Job ID</h4>
+             @Html.TextBoxFor(m => m.jobsId)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>*@
+
+            <div>
+            <h4>Title</h4>
+             @Html.TextBoxFor(m => m.title)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Experience</h4>
+             @Html.TextBoxFor(m => m.experience)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Qualification</h4>
+             @Html.TextBoxFor(m => m.qualification)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Salary</h4>
+             @Html.TextBoxFor(m => m.salary)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            @*<div>
+            <h4>Email ID</h4>
+             @Html.TextBoxFor(m => m.eMailId)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>*@
+
+            <div>
+            <h4>Last Date</h4>
+             @Html.TextBoxFor(m => m.lastdate)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+
+            <div>
+            <h4>Description</h4>
+             @Html.TextBoxFor(m => m.description)
+            <span> </span>
+            <div class="clear"> </div>
+            </div>
+            
+            <div class="submit-button">
+            <input type="submit" value="UPDATE JOB">
+            </div>
+
+            
+        </fieldset>
+    </div>
+}
+        </div>
+</section>
+<div class="space20"></div>

@@ -1,0 +1,126 @@
+@*@model List<OnlineJobShop.Models.registerE>*@
+@*@model OnlineJobShop.Models.registerE*@
+@*@model IEnumerable<OnlineJobShop.Models.registerE>*@
+@*@using OnlineJobShop.Models;*@
+
+
+@model IEnumerable<AgainLastWebRTC.Models.registerE>
+
+@{
+    ViewBag.Title = "index";
+    Layout = "~/Views/Shared/_LayoutEmps.cshtml";
+}
+<br />
+<style>
+    .a{font-size:xx-large}
+    .h3 {font-size:larger }
+</style>
+
+@if (Session["loggedin"] != null)
+{
+    foreach (var u in Model)
+    {  
+         //if (u.Id == int.Parse(Session["Eid"].ToString()))
+        if (u.Id == int.Parse(Session["Eid"].ToString()))
+         {
+
+             <div class="space20"></div>
+                <div class="page-head">
+	                <div class="container">
+		                <div class="row">
+			                <div class="col-md-6">
+                                <h3>Company Profile</h3>
+                                
+				                
+			                </div>
+                            <div style="float:right" ><h3  >@u.comName</h3> </div>
+			
+		                </div>
+	                </div>
+                </div>
+               
+    
+    
+                
+            
+            
+    
+    
+    
+    
+            <div class="container">
+                <div class="container" style="text-align:center"><h3>@u.comName</h3> </div>
+                <div class="space30"></div>
+                <div>Email Address :    @u.eMailId</div>
+                <div class="space30"></div>
+                <div>Website :   @u.website</div>
+                <div class="space30"></div>
+                <div>Contact Number :@u.contNum</div>
+                <div class="space30"></div>
+                <div>Address : @u.address</div>
+                <div class="space30"></div>
+                <div><a href="Employer/Update/@u.Id">UPDATE PROFILE</a></div>
+                <div class="space50"></div>
+            </div>
+    
+}
+}
+    
+    @*
+
+            
+
+@if (Session["LogedEmailID"] != null)
+{
+    
+    
+    
+    <div><p>Current User Profile</p></div>*@
+    
+@*    <div class="page-head">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<h3>Company Profile</h3>
+			</div>
+			
+		</div>
+	</div>
+    </div>
+    <div class="space80"></div>
+    <section id="portfolio" class="container no-padding" style="background-color:red">
+        <div style="padding-left:40%"><h2>Company Name</h2></div>
+        <div class="space50"></div>
+        <div style="float:left;background-color:blue">Image Logo</div>
+        <div style="margin-left:25%;margin-right:25%;background-color:azure"><h3>Introduction Company</h3></div>
+        <div style="float:right;background-color:blue">
+            <div style="padding-left:20%;background-color:aliceblue"><h3>Contact</h3></div>
+            <div>Email Address</div>
+            <div>Address</div>
+            <div>Website</div>
+            <div>Phone Number</div>
+        </div>
+    </section>
+    <div class="space50"></div>*@
+   
+    
+   
+    
+    //String s = @Session["LogedEmailID"].ToString();
+    //foreach(var m in Model.eMailId)
+    //{
+         
+    //}
+    
+ 
+}
+
+
+
+
+
+
+
+
+
+

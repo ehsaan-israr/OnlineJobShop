@@ -1,0 +1,217 @@
+﻿@model AgainLastWebRTC.Models.registerJ
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    .table1 {
+        padding-left: 100px;
+        background-color: white;
+    }
+
+    table {
+        padding: 30px;
+        /*background-color: white;*/
+    }
+
+    .td1 {
+        padding-left: 90px;
+        padding-top: 15px;
+    }
+
+    hr {
+        color: black;
+    }
+
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+
+    .p1 {
+        /*padding-top: 200px;*/
+        /*text-align: center;*/
+        font-size: 20px;
+        font-style: oblique;
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+
+    .div3 {
+        padding-left: 90px;
+    }
+</style>
+
+
+
+
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create Job</h3>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <div class="space80"></div>
+
+    <!-- Contact wrap -->
+    <div class="table1">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h4 class="Section-title"><span>Create your Job here</span></h4>
+                    <div class="space25"></div>
+                    <div class="space40"></div>
+                    <form class="contact-form">
+                        @using (Html.BeginForm())
+                    {
+                            @Html.AntiForgeryToken()
+                            @Html.ValidationSummary(true)
+
+                            <fieldset>
+                                <legend>registerJ</legend>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.J_id)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.J_id)
+                                    @Html.ValidationMessageFor(model => model.J_id)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.fname)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.fname)
+                                    @Html.ValidationMessageFor(model => model.fname)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.lname)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.lname)
+                                    @Html.ValidationMessageFor(model => model.lname)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.email)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.email)
+                                    @Html.ValidationMessageFor(model => model.email)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.username)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.username)
+                                    @Html.ValidationMessageFor(model => model.username)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.password)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.password)
+                                    @Html.ValidationMessageFor(model => model.password)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.salary)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.salary)
+                                    @Html.ValidationMessageFor(model => model.salary)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.qualification)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.qualification)
+                                    @Html.ValidationMessageFor(model => model.qualification)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.area)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.area)
+                                    @Html.ValidationMessageFor(model => model.area)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.experience)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.experience)
+                                    @Html.ValidationMessageFor(model => model.experience)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.age)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.age)
+                                    @Html.ValidationMessageFor(model => model.age)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.gender)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.gender)
+                                    @Html.ValidationMessageFor(model => model.gender)
+                                </div>
+
+                                <div class="editor-label">
+                                    @Html.LabelFor(model => model.contactno)
+                                </div>
+                                <div class="editor-field">
+                                    @Html.EditorFor(model => model.contactno)
+                                    @Html.ValidationMessageFor(model => model.contactno)
+                                </div>
+
+                                <p>
+                                    <input type="submit" value="Create" />
+                                </p>
+                            </fieldset>
+                    }
+
+                        <div>
+                            @Html.ActionLink("Back to List", "Index")
+                        </div>
+
+                        <div class="space25"></div>
+                        <button class="button-blue btn" type="button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space80"></div>
+
+
+    @*section Scripts {
+        @section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    }}*@

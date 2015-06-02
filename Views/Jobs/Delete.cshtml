@@ -1,0 +1,105 @@
+﻿@*@model OnlineJobShop.Models.jobsJ*@
+@model AgainLastWebRTC.Models.jobsJ
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create Job</h3>
+                </div>
+                </div>
+            </div>d
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <div class="space80"></div>
+
+    <!-- Contact wrap -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="Section-title"><span>Create your Job here</span></h4>
+                <div class="space25"></div>
+                <div class="space40"></div>
+                <form class="contact-form">
+
+                    <h2>Delete</h2>
+
+                    <h3>Are you sure you want to delete this?</h3>
+                    <fieldset>
+                        <legend>jobsJ</legend>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.registerJ.fname)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.registerJ.fname)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.lastdate)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.lastdate)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.title)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.title)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.experience)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.experience)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.qualification)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.qualification)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.salary)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.salary)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.description)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.description)
+                        </div>
+                    </fieldset>
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                        <p>
+                            <input type="submit" value="Delete" /> |
+                            @Html.ActionLink("Back to List", "Index")
+                        </p>
+                    }
+                    <div class="space25"></div>
+                    <button class="button-blue btn" type="button">Send Message</button>
+                </form>
+            </div>
+            </div>
+        </div>
+
+            <div class="space80"></div>
+
+

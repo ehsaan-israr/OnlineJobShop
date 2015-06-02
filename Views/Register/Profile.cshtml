@@ -1,0 +1,174 @@
+﻿@*@model List<OnlineJobShop.Models.registerJ>*@
+@model List<AgainLastWebRTC.Models.registerJ>
+
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+ }
+<style>
+    .table1 {
+        padding-left: 50px;
+    }
+
+    table {
+        padding: 70px;
+        background-color: white;
+
+    }
+    .td1 {
+        padding-left: 10px;
+       padding-right: 10px;
+        padding-top: 25px;
+        padding-bottom:25px;
+        }
+    th {
+    color:blue;
+    font-size:medium;
+    font-weight:500;
+        border-style:solid;
+        border-bottom-width:2px;
+        border-bottom-color:gray;
+    }
+
+    td {
+        border-style:solid;
+        border-bottom-width:1px;
+        border-bottom-color:gray;
+        color:green;
+         }
+    hr {
+        color: black;
+    }
+
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+    h3 {
+        padding-right:200px;
+        font-size:30px;
+    }
+
+    .p1 {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .p2 {
+        font-size: 30px;
+    }
+    .div3 {
+        padding-left: 90px;
+    }
+</style>
+
+
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Job Seeker Profile</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="space25"></div>
+            <div class="space40"></div>
+            <form class="contact-form">
+
+
+
+                <h3 style="color:blue"; >View and edit your profile</h3>
+                <fieldset>
+                                        <legend class=""> Job Seeker Details</legend>
+
+  @foreach (var u in Model)
+{
+    if (u.J_id == int.Parse(Session["J_id"].ToString()))
+    {<table class="table1">
+        <tr><td class="td2">Job Seeker:</td>                             
+                     <td class="td1">@u.J_id</td>                             
+   </tr>
+              <tr><td class="td2">First Name:</td>                             
+
+                      <td class="td1">@u.fname</td>
+                          </tr>
+        
+              <tr><td class="td2">Last Name:</td>                             
+
+                      <td class="td1" >@u.lname</td>
+                          </tr>
+
+              <tr><td class="td2" >Email: </td>                             
+
+                      <td class="td1">@u.email</td>
+                          </tr>
+              <tr><td class="td2" >Username: </td>                             
+
+                      <td class="td1">@u.username</td>
+                          </tr>
+              <tr><td class="td2">Password: </td>                             
+
+                      <td class="td1">@u.password</td>
+                          </tr>
+              <tr><td class="td2" > Salary: </td>                             
+
+                      <td class="td1">@u.salary</td>
+                          </tr>
+              <tr><td class="td2" >Qualification: </td>                             
+
+                      <td class="td1">@u.qualification</td>
+                          </tr>
+              <tr><td class="td2">Area: </td>                             
+
+                      <td class="td1">@u.area</td>
+                          </tr>
+              <tr><td class="td2">Experience: </td>                             
+
+                      <td class="td1">@u.experience</td>
+                          </tr>
+              <tr><td class="td2">Age: </td>                             
+
+                      <td class="td1">@u.age</td>
+                          </tr>
+              <tr><td class="td2">Gender: </td>                             
+
+                      <td class="td1">@u.gender</td>
+                          </tr>
+              <tr><td class="td2">Contact no: </td>                             
+
+                      <td class="td1">@u.contactno</td>
+                          </tr>
+      </table>
+  <h3><a href="/Register/Update/@u.J_id" >Click to Update</a></h3>
+                                            
+  }
+  
+}
+                    </fieldset>
+                                    <div class="space25"></div>
+             </form>
+        </div>
+    </div>
+</div>
+
+<div class="space80"></div>
+
+

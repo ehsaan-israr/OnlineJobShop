@@ -1,0 +1,44 @@
+﻿@{
+    ViewBag.Title = "show";
+}
+<style>
+    .td1 {
+        padding-left:30px;
+    }
+</style>
+
+<h2>List of All Jobs</h2>
+@model List<AgainLastWebRTC.Models.jobsJ>
+<table>
+    @foreach (var item in Model)
+    {
+        
+        <tr>
+                <td class="td1" ><strong>ID </strong></td> 
+                <td class="td1"><strong>Job Title </strong></td>
+                <td class="td1"><strong>Salary </strong></td>
+                <td class="td1"><strong>Education </strong></td>
+                <td class="td1"><strong>Experience</strong></td>
+
+                </tr>
+                
+        <tr>   <td class="td1">
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td class="td1">
+                @Html.DisplayFor(modelItem => item.title)
+            </td>
+            <td class="td1">
+                @Html.DisplayFor(modelItem => item.salary)
+            </td>
+            <td class="td1">
+                @Html.DisplayFor(modelItem => item.education)
+            </td>
+            <td class="td1">
+                @Html.DisplayFor(modelItem => item.experience)
+            </td>
+           
+        </tr>
+    }
+</table>
+

@@ -1,0 +1,141 @@
+﻿@model IEnumerable<AgainLastWebRTC.Models.registerJ>
+@{
+    ViewBag.Title = "DeleteNew";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+
+    
+}
+<style>
+    .table1 {
+        padding-left: 50px;
+    }
+
+    table {
+        padding: 70px;
+        background-color: white;
+
+    }
+
+    .td1 {
+        padding-left: 20px;
+        padding-top: 15px;
+    }
+    
+    .td2 {
+        padding-left: 20px;
+        padding-top: 15px;
+        font-size:25px;
+        font-family:Aldhabi;
+    }
+
+    hr {
+        color: black;
+    }
+
+    h1 {
+        padding-left: 70px;
+    }
+
+    h2 {
+        padding-left: 70px;
+    }
+
+    .div2 {
+        padding-top: 20px;
+    }
+
+    .p1 {
+        padding-top: 20px;
+        text-align: center;
+        font-size: 50px;
+    }
+    .p2 {
+        font-size: 30px;
+    }
+    .div3 {
+        padding-left: 90px;
+    }
+</style>
+
+
+
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Delete Job Seeker</h3>
+                </div>
+            </div>
+        </div>
+        <!-- /.row -->
+    </div>
+</div>
+<div class="space80"></div>
+
+<!-- Contact wrap -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="space25"></div>
+            <div class="space40"></div>
+            <form class="contact-form">
+
+
+                <h2>Delete</h2>
+
+                <h3 style="color:red"; >Are you sure you want to delete this?</h3>
+                <fieldset>
+                    <legend> Registered Job Seekers</legend>
+
+<table>
+    <tr>
+        <td class="td2"> Job id</td>
+        <td class="td2"> First Name</td>
+        <td class="td2">Last Name</td>
+        <td class="td2">Email Id</td>
+        <td class="td2">Username</td>
+        <td class="td2">Password</td>
+        <td class="td2">Salary</td>
+        <td class="td2">Qualification</td>
+        <td class="td2">Area</td>
+        <td class="td2">Experience</td>
+        <td class="td2">Age</td>
+        <td class="td2">Gender</td>
+        <td class="td2">Contactno</td>
+    </tr>
+
+    @foreach(var s in Model)
+    {
+        <tr>
+            <td class="td1">@s.J_id</td>
+            <td class="td1">@s.fname</td>
+            <td class="td1">@s.lname</td>
+            <td class="td1">@s.email</td>
+            <td class="td1">@s.username</td>
+            <td class="td1">@s.password</td>
+            <td class="td1">@s.salary</td>
+            <td class="td1">@s.qualification</td>
+            <td class="td1">@s.area</td>
+            <td class="td1">@s.experience</td>
+            <td class="td1">@s.age</td>
+            <td class="td1">@s.gender</td>
+            <td class="td1">@s.contactno</td>
+
+            <td >
+                <a href="/Admin/DeleteN/@s.J_id">Delete User</a>
+            </td>
+        </tr>
+    }
+</table>
+</fieldset>
+                                    <div class="space25"></div>
+             </form>
+        </div>
+    </div>
+</div>
+
+<div class="space80"></div>
+
+

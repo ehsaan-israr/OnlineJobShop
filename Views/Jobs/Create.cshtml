@@ -1,0 +1,117 @@
+﻿@*@model OnlineJobShop.Models.jobsJ*@
+@model AgainLastWebRTC.Models.jobsJ
+
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutPage1.cshtml";
+}
+<div class="body">
+
+    <div class="page-head">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3>Create Job</h3>
+                </div>
+
+            </div>
+            <!-- /.row -->
+        </div>
+    </div>
+
+    <div class="space80"></div>
+
+    <!-- Contact wrap -->
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h4 class="Section-title"><span>Create your Job here</span></h4>
+                <div class="space25"></div>
+                <div class="space40"></div>
+                <form class="contact-form">
+
+
+                    @using (Html.BeginForm("CreateJob", "Jobs", FormMethod.Post))
+                    {
+                        @*@Html.AntiForgeryToken()*@
+                        @Html.ValidationSummary(true)
+
+                        <fieldset>
+                            <legend>jobsJ</legend>
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.J_id, "registerJ")
+                            </div>
+                            <div class="editor-field">
+                                @Html.DropDownList("J_id", String.Empty)
+                                @Html.ValidationMessageFor(model => model.J_id)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.lastdate)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.lastdate)
+                                @Html.ValidationMessageFor(model => model.lastdate)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.title)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.title)
+                                @Html.ValidationMessageFor(model => model.title)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.experience)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.experience)
+                                @Html.ValidationMessageFor(model => model.experience)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.qualification)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.qualification)
+                                @Html.ValidationMessageFor(model => model.qualification)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.salary)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.salary)
+                                @Html.ValidationMessageFor(model => model.salary)
+                            </div>
+
+                            <div class="editor-label">
+                                @Html.LabelFor(model => model.description)
+                            </div>
+                            <div class="editor-field">
+                                @Html.EditorFor(model => model.description)
+                                @Html.ValidationMessageFor(model => model.description)
+                            </div>
+
+                            <p>
+                                <input type="submit" value="Create" />
+                            </p>
+                        </fieldset>
+                    }
+
+                    <div>
+                        @Html.ActionLink("Back to List", "Index")
+                    </div>
+                    <div class="space25"></div>
+                    <button class="button-blue btn" type="button">Send Message</button>
+                </form>
+            </div>
+            </div>
+            <div class="space80"></div>
+
+
+            @*@section Scripts {
+                @Scripts.Render("~/bundles/jqueryval")
+            }*@
